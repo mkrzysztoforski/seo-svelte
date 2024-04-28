@@ -1,58 +1,60 @@
-# create-svelte
+# Svelte SEO Component
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+🚀 Enhance your Svelte application's SEO with this easy-to-use SEO component that supports essential meta tags and social media integrations.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+## Features
 
-## Creating a project
+- **SEO Basics**: Title, description, and keywords.
+- **Social Media Ready**: Open Graph and Twitter Cards for better link previews.
+- **Canonical URLs**: Avoid duplicate content issues.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+`npm i svelte-seo`
 
-# create a new project in my-app
-npm create svelte@latest my-app
+## Props
+
+- `title` (string): The title of the webpage. **Required**
+- `description` (string): A brief description of the webpage. **Required**
+- `other` For all others please check the config **Not required**
+
+## Usage
+
+```svelte
+<script>
+    import Seo from './seo.svelte';
+</script>
+
+    <Seo title="Amazing Svelte App"
+       description="Explore the features of our application."
+       author="John Appleseed"
+       keywords={['svelte', 'app', 'technology']}
+       url="https://www.example.com/page"
+       imageUrl="https://www.example.com/image.jpg"
+    />
 ```
 
-## Developing
+## Best Practices
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- **Title**: Keep your titles under 60 characters to ensure they display fully in search results.
+- **Description**: Aim for descriptions between 50-160 characters to provide enough detail while maintaining visibility in search results.
+- **Keywords**: Use relevant keywords but avoid keyword stuffing.
+- **URL and Image URL**: Ensure these are absolute URLs to help social media platforms and search engines properly index and display your content.
 
-```bash
-npm run dev
+## Contributing
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Feel free to fork this project and submit pull requests or create an issue if you find any bugs or have suggestions for improvements.
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+## License
 
-## Building
+Distributed under the MIT License.
 
-To build your library:
+## Emoji Legends
 
-```bash
-npm run package
-```
+- 🚀 - New feature
+- ✨ - Improvement
+- 🐛 - Bugfix
 
-To create a production version of your showcase app:
+---
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+Enhance your Svelte applications' online presence effectively with this SEO component! Feel free to adjust and expand it as needed to fit your specific requirements.
