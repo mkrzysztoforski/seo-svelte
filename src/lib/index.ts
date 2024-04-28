@@ -1,1 +1,1 @@
-// Reexport your entry components here
+export { default as Seo } from './seo.svelte';
